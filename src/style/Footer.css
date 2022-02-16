@@ -1,0 +1,13 @@
+.footer,
+.openSourceFooter {
+  color: #006ec5;
+  font-family: "Saira", sans-serif;
+}
+.footer {
+  position: relative;
+  bottom: -15px;
+}
+.openSourceFooter:hover {
+  color: #48aff6;
+  font-weight: bold;
+}

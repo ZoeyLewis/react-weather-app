@@ -1,0 +1,67 @@
+.weeklyForecastTitle {
+    color: #006ec5;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 50px;
+  }
+  .weeklyForecastBackground {
+    background: #d9edfd;
+    border-style: solid;
+    border-color: #48aff6;
+    border-radius: 10px;
+    border-width: 5px;
+    height: 50px;
+    margin: 0px 5px;
+  }
+  .weekDay,
+  .weeklyTemperature {
+    margin: 0 auto;
+    padding: 10px 10px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+  }
+  .weekDay {
+    color: #006ec5;
+    font-weight: bold;
+    text-align: center;
+  }
+  .weeklyForecastBackground,
+  .weekDay {
+    position: relative;
+    bottom: 40px;
+    max-width: 95%;
+  }
+  .forecastIcons {
+    border-style: solid;
+    border-color: #d1f0ee;
+    border-radius: 100px;
+    border-width: 5px;
+    margin: 0% auto;
+    position: relative;
+    bottom: 30px;
+    max-width: 9%;
+    padding: 5px;
+  }
+  .weeklyForecast {
+    margin-left: 65px;
+    max-width: 90%;
+  }
+  .weeklyTemperature {
+    position: relative;
+    bottom: 25px;
+  }
+  .maxTemp {
+    color: #5a758e;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .minTemp {
+    color: #5a758e;
+    font-size: 18px;
+    font-weight: lighter;
+    opacity: 60%;
+  }
+  

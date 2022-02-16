@@ -1,0 +1,17 @@
+#city-form {
+    background: #d9edfd;
+    padding: 15px;
+  }
+  .cityLabel {
+    color: #5a758e;
+    font-size: 20px;
+    display: block;
+    position: relative;
+    top: 4px;
+    text-align: right;
+  }
+  #location-button {
+    position: relative;
+    right: -25px;
+  }
+  
