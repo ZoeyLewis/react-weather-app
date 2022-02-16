@@ -2,6 +2,7 @@ import React from "react";
 import "./style/Forecast.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon"
+import TodayTemperature from "./TodayTemperature.js"
 
 export default function Forecast(props) {
     return (
@@ -13,8 +14,7 @@ export default function Forecast(props) {
             <div id="updated-date">Last updated:</div>
             <div id="today-date"><FormattedDate date={props.data.date}/></div>
             <div id="today-temp">
-              <span id="degrees">{props.data.temperature}</span>
-              <span id="celsius">°C</span>
+                <TodayTemperature celsius={props.data.temperature}/>
               <WeatherIcon code={props.data.icon} alt={props.data.description}
                 id="today-weather-emoji"/>
             </div>
