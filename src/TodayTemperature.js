@@ -22,7 +22,7 @@ setUnit("fahrenheight");
 
                 return (
                     <div>
-                    <span id="degrees">{fahrenheight}</span>
+                    <span id="degrees">{Math.round(fahrenheight)}</span>
                                   <span id="unit"><a href="/" onClick={convertToCelsius}>°C</a> | °F</span>
                                   </div>
                                   )
