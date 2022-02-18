@@ -15,7 +15,7 @@ export default function Forecast(props) {
             <div id="today-date"><FormattedDate date={props.data.date}/></div>
             <div id="today-temp">
                 <TodayTemperature celsius={props.data.temperature}/>
-              <WeatherIcon code={props.data.icon} alt={props.data.description}
+              <WeatherIcon code={props.data.icon} alt={props.data.description} size={64}
                 id="today-weather-emoji"/>
             </div>
             

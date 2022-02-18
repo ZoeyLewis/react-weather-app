@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/Week.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Week() {
   return (
@@ -8,74 +9,22 @@ export default function Week() {
         <div className="col-2" />
         <div className="weeklyForecastTitle col-4">Weekly Forecast:</div>
       </div>
-      <div className="weeklyForecastBackground weekDay row">
-        <div className="col-2">Sunday</div>
-        <div className="col-2">Monday</div>
-        <div className="col-2">Tuesday</div>
-        <div className="col-2">Wednesday</div>
-        <div className="col-2">Thursday</div>
-        <div className="col-2">Friday</div>
+    <div className="row">
+    <div className="col">
+      <div className="weeklyForecastBackground weekDay">
+        <div>Sunday</div>
       </div>
       <div className="weeklyForecast" id="weekly-forecast">
-        <div className="row">
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="Sunshine"
-          />
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="Sun with showers"
-          />
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/03d@2x.png"
-            alt="Cloud"
-          />
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt="Chance of rain"
-          />
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/04d@2x.png"
-            alt="Chance of rain"
-          />
-          <img
-            className="forecastIcons col-2"
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt="Sunshine"
-          />
-          <div className="weeklyTemperature row">
-            <div className="col-2">
+        <div className="forecastIcons">
+          <WeatherIcon code={"10d"} size={45} />
+          </div>
+          <div className="weeklyTemperature">
               <span className="maxTemp"> 3° |</span>
               <span className="minTemp"> 0° </span>
-            </div>
-            <div className="col-2">
-              <span className="maxTemp"> 3° |</span>
-              <span className="minTemp"> 0° </span>
-            </div>
-            <div className="col-2">
-              <span className="maxTemp"> 3° |</span>
-              <span className="minTemp"> 0° </span>
-            </div>
-            <div className="col-2">
-              <span className="maxTemp"> 3° |</span>
-              <span className="minTemp"> 0° </span>
-            </div>
-            <div className="col-2">
-              <span className="maxTemp"> 3° |</span>
-              <span className="minTemp"> 0° </span>
-            </div>
-            <div className="col-2">
-              <span className="maxTemp"> 3° |</span>
-              <span className="minTemp"> 0° </span>
-            </div>
           </div>
         </div>
+        </div>
+        </div>
       </div>
-    </div>
   );
 }

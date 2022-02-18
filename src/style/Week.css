@@ -39,11 +39,11 @@
     border-color: #d1f0ee;
     border-radius: 100px;
     border-width: 5px;
-    margin: 0% auto;
     position: relative;
+    margin: 0 auto;
     bottom: 30px;
     max-width: 9%;
-    padding: 5px;
+    padding: 20px 5px 5px 17px;
   }
   .weeklyForecast {
     margin-left: 65px;
