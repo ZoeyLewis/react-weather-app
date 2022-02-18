@@ -1,8 +1,17 @@
 import React from "react";
 import "./style/Week.css";
 import WeatherIcon from "./WeatherIcon";
+import axios from "axios";
 
-export default function Week() {
+export default function Week(props) {
+  const apiKey = `39bb51e02e1cb29597d2f2e3f55efcc3`
+  const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.latitude}&lon=${props.longitude}&appid=${apiKey}&units=metric`
+
+  function handleResponse(response){
+console.log(response.data)
+  }
+axios.get(apiUrl).then(handleResponse)
+  
   return (
     <div className="week">
       <div className="row">

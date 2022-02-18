@@ -3,6 +3,7 @@ import "./style/Search.css";
 import axios from "axios";
 import ReactLoading from "react-loading";
 import Forecast from "./Forecast";
+import Week from "./Week";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ loaded: false });
@@ -10,6 +11,8 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeather({
       loaded: true,
+      longitude: response.data.coord.lon,
+      latitude: response.data.coord.lat,
       date: new Date (response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
@@ -63,6 +66,7 @@ setCity(event.target.value);
       </div>
     </form>
     <Forecast data={weather}/>
+    <Week latitude={weather.latitude} longitude={weather.longitude}/>
     </div>
   )}
   else {
