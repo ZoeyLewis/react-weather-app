@@ -5,7 +5,6 @@ import "./style/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/Fonts.css";
 import Search from "./Search.js";
-import Week from "./Week.js";
 import Footer from "./Footer.js";
 
 export default function App() {
@@ -13,7 +12,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Search city="london"/>
-        <Week />
+    
         <Footer />
       </div>
     </div>
