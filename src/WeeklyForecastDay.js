@@ -19,20 +19,18 @@ function day(){
     return (
     <div>
     <div className="row">
-    <div className="col">
-      <div className="weeklyForecastBackground weekDay">
+      <div className="weekDay">
         <div>{day()}</div>
       </div>
       <div className="weeklyForecast" id="weekly-forecast">
         <div className="forecastIcons">
-          <WeatherIcon code={props.data.weather[0].icon} size={45} />
+          <WeatherIcon className="forecastAnimation" code={props.data.weather[0].icon} size={45} />
           </div>
           <div className="weeklyTemperature">
               <span className="maxTemp">{maxTemperature()}</span>
               <span> | </span>
               <span className="minTemp">{minTemperature()}</span>
           </div>
-        </div>
         </div>
         </div>
         </div>

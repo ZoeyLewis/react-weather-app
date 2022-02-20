@@ -58,11 +58,6 @@ setCity(event.target.value);
             Submit
           </button>
         </div>
-        <div id="location-button" className="col-3">
-          <button type="button" className="btn btn-info">
-            Current Location
-          </button>
-        </div>
       </div>
     </form>
     <Forecast data={weather}/>

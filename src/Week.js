@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style/Week.css";
 import axios from "axios";
 import WeeklyForecastDay from "./WeeklyForecastDay"
@@ -11,17 +11,34 @@ export default function Week(props) {
 setWeeklyForecast(response.data.daily)
 setLoaded(true);
   }
-
+useEffect(() => {
+setLoaded(false);
+}, [props.longitude, props.langitude]);
+  
   if (loaded) {
     return (
     <div className="week">
-      <div className="row">
+      <div className="row weeklyForecastBackground">
         <div className="col-2" />
         <div className="weeklyForecastTitle col-4">Weekly Forecast:</div>
       </div>
-      <WeeklyForecastDay data={weeklyForecast[0]}/>
-      </div>
-  );}
+      <div className="row">
+      {weeklyForecast.map(function(dailyForecast, index) {
+        if (index < 5){
+          return (
+        <div className="col" key={index}>
+        <WeeklyForecastDay data={dailyForecast}/>
+        </div>
+          )
+        }
+        else {
+          return null
+        }
+        
+  })}
+  </div>
+  </div>
+    );}
   else {
     const apiKey = `39bb51e02e1cb29597d2f2e3f55efcc3`
     const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${props.latitude}&lon=${props.longitude}&appid=${apiKey}&units=metric`

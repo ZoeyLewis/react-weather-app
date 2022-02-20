@@ -11,9 +11,18 @@
   }
   
   #unit {
+    color: #006ec5;
     font-size: 15px;
     position: relative;
     bottom: 25px;
+  }
+  #unit a {
+    color: #006ec5;
+    text-decoration: none;
+  }
+  #unit a:hover{
+    color: #006ec5;
+    font-size: 20px;
   }
   
   #today-weather-emoji {
